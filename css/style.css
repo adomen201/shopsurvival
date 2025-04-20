@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../css/Minecraftia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+body {
+    background: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)),
+        url("../img/yellowbackground2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Minecraft", Helvetica;
+    margin: 0;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 3px;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 800px;
+    animation: logo 5s infinite ease-in-out;
+    margin-top: 200px;
+}
+
+@keyframes logo {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.07);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.server-ip {
+    display: inline-block;
+    margin: 0px 0px 0px 0px;
+    padding: 2px 0;
+    color: white;
+    font-family: 'Minecraft', sans-serif;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px white solid;
+    width: 80%;
+    max-width: 450px;
+    line-height: 27px;
+	cursor: pointer;
+}
+
+.server-ip > p > span {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 18px 0 10px 0;
+    gap: 15px;
+}
+
+.item {
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    max-width: 200px;
+}
+
+.item img {
+    transition: all 0.2s ease;
+    margin-bottom: 7px;
+    width: 50%;
+}
+
+.items .item_vote .img {
+    transform: scale(0.9);
+}
+
+.item img:hover {
+    transform: scale(1.1);
+}
+
+.items .item_vote .img:hover {
+    transform: scale(1.0);
+}
+
+.items .item_discord .img {
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+}
+
+.items .item_discord .img:hover {
+    transform: scale(1.3);
+}
+
+.title {
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+}
+
+.subtitle {
+    color: #cfcfcf;
+    font-size: 12px;
+}
+
+.title,
+.subtitle {
+    margin: -5px;
+    padding: 0;
+}
+
+/* Social Icons */
+.socials {
+    position: fixed;
+    top: 10px;
+    right: 0px; 
+    display: flex;
+    gap: 0px;
+
+}
+
+.info {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.info:hover {
+    transform: scale(1.1);
+}
+
+/* Popup Overlay */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .logo img {
+        width: 680px;
+    }
+
+    .playercount {
+        margin-top: -20px;
+        padding: 5px;
+    }
+
+    .playercount > p > span {
+        padding: 2px 7px;
+    }
+
+    .items {
+        gap: 30px;
+    }
+
+    .socials {
+        top: 0;
+    }
+
+    .info {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo
+    .socials {
+        top: 10px;
+        right: 0px;
+        transform: scale(0.8);
+    }
+
+    .socials img {
+        width: 30px; 
+        height: 30px; 
+    }
+}
+
+@media (min-width: 1000px) {
+    .items {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .item {
+        margin-left: 0;
+    }
+
+    .socials {
+        right: 0px;
+    }
+
+    .info {
+        bottom: 20px;
+    }
+}
