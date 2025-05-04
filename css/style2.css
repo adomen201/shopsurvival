@@ -1,32 +1,27 @@
 * {
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: 'Minecraft';
     src: url('../css/Minecraftia.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
-  
+
 body {
     background: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)),
         url("../img/yellowbackground2.jpg") no-repeat center center fixed;
     background-size: cover;
     font-family: "Minecraft", Helvetica;
     margin: 0;
-    position: relative;
 }
 
 a {
     text-decoration: none;
 }
 
-p {
-    margin: 0;
-    padding: 3px;
-}
-
 .container {
+    margin: auto;
+    width: 50%;
     display: flex;
     justify-content: center;
 }
@@ -37,48 +32,38 @@ p {
     animation: logo 5s infinite ease-in-out;
     margin-top: 10px;
 }
-.container {
-    margin: auto;
-    width: 50%;
-}
-table h1 {
-    color: #fff;
-    text-align: center;
-}
-table
-{
+
+table {
     text-align: center;
     background-color: #333;
     border: black 2px solid;
     padding: 10px;
-    
+    color: white;
+    width: 100%;
 }
 
-td{
+td {
     border: black 2px solid;
     padding: 10px;
 }
 
-@keyframes logo {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.07);
-    }
-    100% {
-        transform: scale(1);
-    }
+table h1, h2 {
+    color: white;
+    text-align: center;
 }
 
-/* Social Icons */
+@keyframes logo {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
 .socials {
     position: fixed;
     top: 10px;
     right: 0px; 
     display: flex;
     gap: 0px;
-
 }
 
 .info {
@@ -93,7 +78,6 @@ td{
     transform: scale(1.1);
 }
 
-/* Popup Overlay */
 .popup-overlay {
     display: none;
     position: fixed;
@@ -113,9 +97,7 @@ td{
     padding: 20px;
     width: 80%;
     max-width: 500px;
-    height: auto;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .popup-content {
@@ -131,49 +113,89 @@ td{
     color: #333;
 }
 
-/* Media Queries */
-@media (min-width: 600px) {
-    .logo img {
-        width: 680px;
-    }
-    .socials {
-        top: 0;
-    }
-
-    .info {
-        bottom: 10px;
-    }
-}
 
 @media (max-width: 600px) {
-    .logo
-    .socials {
-        top: 10px;
-        right: 0px;
-        transform: scale(0.8);
-    }
-
     .socials img {
-        width: 30px; 
-        height: 30px; 
+        width: 30px;
+        height: 30px;
     }
 }
 
-@media (min-width: 1000px) {
-    .items {
-        justify-content: center;
-        gap: 40px;
+  .top-nav-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
     }
 
-    .item {
-        margin-left: 0;
+    .top-nav {
+      background-color: #1e1e2f;
+      padding: 12px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      gap: 15px;
     }
 
-    .socials {
-        right: 0px;
+    .top-nav button {
+      background: #2c2c2c;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
-    .info {
-        bottom: 20px;
+    .top-nav button:hover {
+      background: #3a3a5e;
+      transform: scale(1.05);
     }
-}
+
+  .rules-section {
+    background: #1e1e2f;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .rules-section h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #2c2c2c;
+    color: #fff;
+    padding: 14px 24px;
+    margin-top: -40px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 20px;
+    border-radius: 12px 12px 0 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #444;
+    text-align: left;
+  }
+
+  th {
+    background-color: #2a2a3f;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #2e2e4e;
+  }
+
+  tr:hover {
+    background-color: #3a3a5e;
+  }
