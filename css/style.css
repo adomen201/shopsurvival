@@ -196,7 +196,7 @@ p {
         width: 680px;
     }
 
-    .playercount {
+    .server-ip {
         margin-top: -20px;
         padding: 5px;
     }
@@ -248,5 +248,14 @@ p {
 
     .info {
         bottom: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .server-ip {
+        font-size: 0.9rem;
+    }
+
+    .server-ip > p > span {
+        font-size: 1.2em;
     }
 }
