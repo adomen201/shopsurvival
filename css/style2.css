@@ -1,201 +1,184 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: 'Minecraft';
-    src: url('../css/Minecraftia.ttf') format('truetype');
+  font-family: 'Minecraft';
+  src: url('../css/Minecraftia.ttf') format('truetype');
 }
 
 body {
-    background: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)),
-        url("../img/yellowbackground2.jpg") no-repeat center center fixed;
-    background-size: cover;
-    font-family: "Minecraft", Helvetica;
-    margin: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)),
+              url("../img/yellowbackground2.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    margin: auto;
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {
-    width: 100%;
-    max-width: 500px;
-    animation: logo 5s infinite ease-in-out;
-    margin-top: 10px;
-}
-
-table {
-    text-align: center;
-    background-color: #333;
-    border: black 2px solid;
-    padding: 10px;
-    color: white;
-    width: 100%;
-}
-
-td {
-    border: black 2px solid;
-    padding: 10px;
-}
-
-table h1, h2 {
-    color: white;
-    text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
+  animation: logo 5s infinite ease-in-out;
 }
 
 @keyframes logo {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.07); }
-    100% { transform: scale(1); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #333;
+  border: 2px solid #121212;
+  border-radius: 12px;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #222;
+}
+
+table h1, table h2 {
+  color: white;
+  text-align: center;
+}
+
+.rules-section {
+  background: #121212;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.rules-section h2 {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  padding: 14px 24px;
+  margin: -40px -20px 20px -20px;
+  border-radius: 12px 12px 0 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.top-nav {
+  background-color: #1a1a1a;
+  padding: 12px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 15px;
+}
+
+.top-nav button {
+  background: #2b2b2b;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.top-nav button:hover {
+  background: #3b3b3b;
+  transform: scale(1.05);
 }
 
 .socials {
-    position: fixed;
-    top: 10px;
-    right: 0px; 
-    display: flex;
-    gap: 0px;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  display: flex;
+  gap: 0;
+}
+
+@media (max-width: 600px) {
+  .socials img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .info {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .info:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1a1a;
+  color: #eee;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 .popup-content {
-    text-align: center;
+  text-align: center;
 }
 
 .popup .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #333;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
 }
-
-
-@media (max-width: 600px) {
-    .socials img {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-  .top-nav-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .top-nav {
-      background-color: #1e1e2f;
-      padding: 12px 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      display: flex;
-      gap: 15px;
-    }
-
-    .top-nav button {
-      background: #2c2c2c;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .top-nav button:hover {
-      background: #3a3a5e;
-      transform: scale(1.05);
-    }
-
-  .rules-section {
-    background: #1e1e2f;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 40px auto;
-    max-width: 800px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  .rules-section h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #2c2c2c;
-    color: #fff;
-    padding: 14px 24px;
-    margin-top: -40px;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: 20px;
-    border-radius: 12px 12px 0 0;
-    font-size: 28px;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px #000;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  th, td {
-    padding: 12px;
-    border: 1px solid #444;
-    text-align: left;
-  }
-
-  th {
-    background-color: #2a2a3f;
-    color: #fff;
-  }
-
-  tr:nth-child(even) {
-    background-color: #2e2e4e;
-  }
-
-  tr:hover {
-    background-color: #3a3a5e;
-  }
