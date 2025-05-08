@@ -130,7 +130,6 @@ p {
     padding: 0;
 }
 
-/* Social Icons */
 .socials {
     position: fixed;
     top: 10px;
@@ -152,7 +151,6 @@ p {
     transform: scale(1.1);
 }
 
-/* Popup Overlay */
 .popup-overlay {
     display: none;
     position: fixed;
@@ -190,7 +188,6 @@ p {
     color: #333;
 }
 
-/* Media Queries */
 @media (min-width: 600px) {
     .logo img {
         width: 680px;
